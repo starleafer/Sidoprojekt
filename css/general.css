@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "header header"
+                          "main aside"
+                          "footer footer";
+    border: solid 1px black;
+}
+
+#top-header {
+    display: flex;
+}
+
+#top-buttons {
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+#subscribe-button, 
+#loggin-button {
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    background-color: #66a182;
+}
+
+#subscribe-button {
+    color: #66a182;
+    border: solid 1px #66a182;
+    background-color: white;
+}
+
+
+#top-buttons a {
+    padding: 10px;
+}
+
+#menu-nav a,
+#sok-link {
+    padding: 10px;
+}
+
+#sok-link {
+    margin-left: auto;
+}
+
+#menu-nav {
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+header {
+    grid-area: header;
+    border: solid 1px rgb(247, 33, 33);
+
+}
+
+main {
+    grid-area: main;
+    border: solid 1px rgb(6, 8, 166);
+
+}
+
+aside {
+    grid-area: aside;
+    border: solid 1px rgb(219, 242, 11);
+
+}
+
+footer {
+    grid-area: footer;
+    border: solid 1px black;
+
+}
+
