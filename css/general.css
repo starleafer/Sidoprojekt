@@ -42,11 +42,15 @@ header {
     background-color: white;
 }
 
-h1 {
+/* h1 {
     color: var(--green-color);
     text-transform: capitalize;
     padding-right: 5px;
     border-right: solid 1px var(--dark-grey-color);
+} */
+
+#logo {
+    width: 10%;
 }
 
 #top-buttons {
