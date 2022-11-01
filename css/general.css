@@ -214,3 +214,9 @@ footer ul li {
     text-decoration: none;
     color: inherit;
 }
+
+#about {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5%;
+}
