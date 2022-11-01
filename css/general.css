@@ -10,6 +10,7 @@
     --dim-grey-color: #736c6a;
     --ae-grey-color: #aeaeae;
     --coltured-color: #f8f8f8;
+    --white-color: white;
     /* FONT FAMILY */
 
     /* FONT SIZE */
@@ -62,14 +63,14 @@ header {
 #loggin-button {
     border-radius: 40px;
     text-decoration: none;
-    color: white;
-    background-color: #66a182;
+    color: var(--white-color);
+    background-color: var(--green-color);
 }
 
 #subscribe-button {
-    color: #66a182;
+    color: var(--green-color);
     border: solid 1px var(--green-color);
-    background-color: white;
+    background-color: var(--white-color);
 }
 
 
@@ -88,7 +89,7 @@ header {
 #menu-nav a,
 #sok-link {
     padding: 12px 2% 10px 2%;
-    color: white;
+    color: var(--white-color);
     font-size: var(--link-text-size);
 
 }
@@ -130,11 +131,21 @@ h2 {
     font-size: 3rem;
 }
 
-#line {
+#line, #line-white{
     height: 1px;
     width: 95%;
-    margin: 30px auto;
+    
+}
+
+#line {
     background-color: var(--dark-grey-color);
+    margin: 30px auto;
+}
+
+#line-white {
+    width: 100%;
+    margin: 30px auto;
+    background-color: var(--coltured-color);
 }
 
 /* ASIDE */
@@ -142,10 +153,6 @@ h2 {
 aside {
     grid-area: aside;
     border-right: 1px solid var(--dark-grey-color);
-}
-
-h3 {
-    font-size: 3rem;
 }
 
 #vader-api {
@@ -158,8 +165,43 @@ footer {
     grid-area: footer;
     border: solid 1px black;
     background-color: var(--dark-grey-color);
-    color: white;
-    height: 300px;
+    color: var(--white-color);
+    display: grid;
+    grid-template-areas: "footer-div1 footer-div2 footer-div3"
+                          "footer-div4 footer-div4 footer-div4";
 
 }
+
+footer h3 {
+    padding-bottom: 4%;
+}
+
+#footer-div1 {
+    grid-area: footer-div1;
+}
+#footer-div2 {
+    grid-area: footer-div2;
+}
+#footer-div3 {
+    grid-area: footer-div3;
+}
+#footer-div4 {
+    grid-area: footer-div4;
+}
+
+#footer-div1, #footer-div2, #footer-div3 {
+    padding: 10% 10% 0 25%;
+}
+#footer-div4 {
+    padding: 1% 3.3% 5% 3.3%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: 1%;
+}
+
 
