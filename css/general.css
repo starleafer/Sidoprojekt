@@ -217,15 +217,8 @@ footer ul li {
     color: inherit;
 }
 
-.sidebar-container {
+#about {
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    padding: 5%;
- }
-
-.sidebar-container section{
-    border: 1px solid black;
-    border-radius: 2px; 
-    font-size: 1rem;
+    flex-flow: row nowrap;
+    gap: 5%;
 }
