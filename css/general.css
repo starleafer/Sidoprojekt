@@ -14,7 +14,7 @@
     /* FONT FAMILY */
 
     /* FONT SIZE */
-    --link-text-size: 1.2rem;
+    --link-text-size: 1rem;
 
 }
 a:active,a:focus {
@@ -88,10 +88,12 @@ header {
 
 #menu-nav a,
 #sok-link {
-    padding: 12px 2% 10px 2%;
+    padding: 12px 2% 6px 2%;
     color: var(--white-color);
     font-size: var(--link-text-size);
-
+}
+.fa-search{
+    font-size: 1rem;
 }
 
 #sok-link {
@@ -102,7 +104,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     background-color: var(--dark-grey-color);
-    min-height:49px;
+    min-height:45px;
 
 }
 header {
@@ -213,4 +215,17 @@ footer ul li {
 .social-media a{
     text-decoration: none;
     color: inherit;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 5%;
+ }
+
+.sidebar-container section{
+    border: 1px solid black;
+    border-radius: 2px; 
+    font-size: 1rem;
 }
