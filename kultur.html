@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/kultur-style.css">
-    <title>Sidoprojekt</title>
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>Trubbel-Kultur</title>
 </head>
 
 <body>
@@ -36,26 +37,38 @@
 
         <main>
             <section>
-                <img src="img/hamburger.jpg" alt="hamburger">
-                <h2>Ny forsning visar att flugsvamp inte passar på burgare.</h2>
+                <img src="img/death-metal.jpeg" alt="death-metal-band">
+                <h2>Death-metal bandet "Violin violence" tillbaka i Sverige på turné</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
                 <div id="line"></div>
             </section>
             <section>
-                <img src="img/hamburger.jpg" alt="hamburger">
-                <h2>Ny forsning visar att flugsvamp inte passar på burgare.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
+                <img src="img/interview.jpeg" alt="interview-with-someone">
+                <h2>Intervju: Äldre man</h2>
+                <p>Vi intervjuade Mads Epicsson, han hade inget att säga. Vi kan lära oss mycket av Mads.</p>
+                <div id="line"></div>
+            </section>
+            <section>
+                <img src="img/party-hard.jpeg" alt="crazy-ladies-parying">
+                <h2>Agda, 98år - "Ålder stoppar oss inte från att gå cray-cray"</h2>
+                <p>Dessa damer är just kommit tillbaka från eventet Burning man, detta firas med en ordentlg förfest för att sedan gå vidare till Golden Hits.</p>
                 <div id="line"></div>
             </section>
         </main>
         <aside class="sidebar-container">
-            <section  id="latest-news">Latest news
+            <section  id="senaste-kultur-side">
+                <ul>
+                    <li>På turné i Stockholm</li>
+                    <li>Upplysande intervju</li>
+                    <li>Festen slutar aldrig</li>
+                    <li>Drinken som föryngrar</li>
+                    <li>Drinken som åldrar</li>
+                </ul>
             </section>
-            <section  id="weather-side">
-                <div>
-                    <img src="" alt="">
-                    <p>need to update weather later</p>
-
+            <section  id="calendar-side">
+                <div class="wrapper">
+                    <div id="calendar"></div>
+                    <div id="calendar_data"></div>
                 </div>
             </section>
             <section id="advert-side">Advertisement</section>
@@ -99,6 +112,7 @@
         </div>
         </footer>
         <!-- <script src="scripts/api-calls.js"></script> -->
+        <script src="scripts/calendar.js"></script>
     </div>
 </body>
 </html>

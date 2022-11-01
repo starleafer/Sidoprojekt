@@ -1,0 +1,194 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  background: #efefef;
+}
+/* for demo */
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  height: 480px;
+  background: #fff;
+  margin: 1em auto;
+  border: 4px solid #e2e2e2;
+  box-shadow: 0 10px 9px -6px #c5c5c5;
+  border-top-width: 25px;
+  border-bottom-width: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+div#calendar {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+}
+table {
+  width: 100%;
+  font-family: sans-serif;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.head_cal {
+  background: #fff;
+  color: #85baff;
+  font-size: 2rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+.subhead_cal {
+  background: #85baff;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+.week_cal {
+  background: #fff;
+  color: #d7d7d7;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.white_cal {
+  background: #ececec !important;
+}
+tbody.days_cal tr td a {
+  padding: 0;
+  text-decoration: none;
+  background: #fff;
+  color: #888;
+  height: 3.2rem;
+  width: 100%;
+  line-height: 3.2rem;
+  display: block;
+}
+tbody.days_cal tr td {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ececec;
+  text-align: center;
+  width: 14.28571428571429%;
+  height: auto;
+}
+.event {
+  color: #85baff !important;
+  transition: all 0.3s ease;
+}
+.today_cal.event {
+  background: #ff8d8d !important;
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+.today_cal.event:hover,
+.event:hover {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.week_event {
+  color: #85baff;
+}
+#calendar_data {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #c5c5c5;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0, 0);
+  transition: all 0.8s ease;
+}
+ 
+#calendar_data h3 {
+  text-align: center;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 0;
+  background: #f2f2f2;
+  color: #43aeef;
+  border-bottom: 1px solid #dfdfdf;
+  text-transform: capitalize;
+}
+#calendar_data dl {
+  padding: 0.5em;
+  margin-left: 0;
+  display: block;
+  height: calc(100% - 4rem);
+}
+#calendar_data dt {
+  float: left;
+  clear: left;
+  width: 5rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #43b0ef;
+  background: #fff;
+  padding: 0.2rem;
+}
+#calendar_data dd {
+  margin: 0 0 1rem 5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #adadad;
+  border-bottom: 1px solid #eaeaea;
+}
+#calendar_data dd:last-child {
+  border: none;
+}
+ 
+#calendar_data a:not(.hideEvent) {
+  color: #43aeef;
+  border: 0.1rem solid #43aeef;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+}
+.show_data {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1, 1) !important;
+  transition: all 0.2s ease;
+}
+ 
+.hideEvent {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background: #f2f2f2;
+  border-left: 0.1rem solid #e5e5e5;
+  color: #d3d3d3 !important;
+}
+.hideEvent:hover {
+  text-decoration: none;
+  color: #f55;
+}
