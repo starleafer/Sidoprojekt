@@ -1,0 +1,40 @@
+.left-picture {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 2%;
+}
+
+#latest-news {
+    padding: 5%;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.theme {
+    color: var(--dim-grey-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.news-dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--green-color);
+    color: var(--green-color);
+    border-radius: 50%;
+    float: left;
+    margin: 2px 10px 0 10px;
+}
+
+.sport-latest-headline {
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.sport-quiz img {
+    width: 50px;
+}
