@@ -155,8 +155,16 @@ h2 {
 aside {
     grid-area: aside;
     border-right: 1px solid var(--dark-grey-color);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
+.sidebar-container section{
+    border: 1px solid black;
+    border-radius: 2px;
+}
 #vader-api {
     font-size: small;
 }
@@ -222,3 +230,4 @@ footer ul li {
     flex-flow: row nowrap;
     gap: 5%;
 }
+
