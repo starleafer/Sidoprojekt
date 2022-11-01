@@ -205,3 +205,12 @@ footer ul li {
 }
 
 
+.fa {
+    margin-right: 0.5rem;
+    color: var(--white-color);
+}
+
+.social-media a{
+    text-decoration: none;
+    color: inherit;
+}
