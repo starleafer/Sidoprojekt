@@ -4,8 +4,30 @@
     column-gap: 2%;
 }
 
-#latest-news {
+/* ASIDE */
+
+aside {
+    /* background-color: #f5f5f5; */
+}
+
+aside section {
+    background-color: var(--white-color);
+    border: none !important; /************ CHANGE THIS!!!! ************/
+    box-shadow: 0px 0px 4px 2px #2f2f2f33;
+}
+
+#latest-news, #chronicle {
     padding: 5%;
+}
+
+.chronicle-heading, .chronicle-title {
+    font-size: 1.5rem;
+    float: left;
+    font-style: italic;
+}
+
+.chronicle-heading {
+    color: var(--green-color);
 }
 
 h4 {
@@ -35,6 +57,70 @@ h4 {
     font-size: 0.9rem;
 }
 
-.sport-quiz img {
-    width: 50px;
+#sport-quiz img {
+    width: 100%;
+}
+
+/* POP UP */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--white-color);
+    width: 900px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.close-modal {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
 }
