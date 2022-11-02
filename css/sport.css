@@ -53,7 +53,7 @@ h4 {
 }
 
 .sport-latest-headline {
-    margin-left: 30px;
+    margin: 0 20px 0 30px;
     font-weight: 550;
     font-size: 1rem;
 }
