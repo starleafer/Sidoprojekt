@@ -4,8 +4,30 @@
     column-gap: 2%;
 }
 
-#latest-news {
+/* ASIDE */
+
+aside {
+    /* background-color: #f5f5f5; */
+}
+
+aside section {
+    background-color: var(--white-color);
+    border: none !important; /************ CHANGE THIS!!!! ************/
+    box-shadow: 0px 0px 4px 2px #2f2f2f33;
+}
+
+#latest-news, #chronicle {
     padding: 5%;
+}
+
+.chronicle-heading, .chronicle-title {
+    font-size: 1.5rem;
+    float: left;
+    font-style: italic;
+}
+
+.chronicle-heading {
+    color: var(--green-color);
 }
 
 h4 {
@@ -35,6 +57,6 @@ h4 {
     font-size: 0.9rem;
 }
 
-.sport-quiz img {
-    width: 50px;
+#sport-quiz img {
+    width: 100%;
 }
