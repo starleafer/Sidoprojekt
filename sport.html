@@ -66,15 +66,40 @@
                 <p class="chronicle-heading">Sportkrönika</p><p class="chronicle-title">Den nya generationens fotbollsspelare krossar glastaket</p>
             </section>
             <section id="sport-quiz">
-                <img src="img/sportquiz.jpg" alt="sportquiz">
-                <button data-modal-target="#modal">Börja quiza!</button>
+                <button id="quiz-button" data-modal-target="#modal">
+                    <img src="img/sportquiz.jpg" alt="sportquiz">
+                </button>
                 <div class="modal" id="modal">
                     <div class="modal-header">
                         <div class="modal-title">Sport quiz</div>
                         <button data-close-button class="close-modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quos sapiente fugiat veniam est temporibus voluptatibus, molestias assumenda explicabo voluptate. Distinctio optio ea repudiandae sequi recusandae illo consequuntur perspiciatis molestias mollitia numquam unde quod, nihil corporis excepturi beatae ex, tempore reprehenderit? A enim animi perspiciatis laboriosam quod voluptatibus fugiat beatae vero itaque! Tempora asperiores ex similique molestias non beatae corrupti quisquam odio, nisi alias voluptates molestiae vitae, quidem sint. Ducimus aliquam magni necessitatibus vitae dolores, saepe optio soluta explicabo provident!
+                        <div class="question">
+                            <p>Hur många mål är rekord under en fotbollsmatch?</p>
+                            <ul>
+                                <li><button id="chose-152">152</button></li>
+                                <li><button id="chose-28">28</button></li>
+                                <li><button id="chose-72">72</button></li>
+                            </ul>
+                        </div>
+                        <div class="question">
+                            <p>Vad heter världens bästa cyklist?</p>
+                            <ul>
+                                <li><button>Per</button></li>
+                                <li><button>Gunnar</button></li>
+                                <li><button>Klara</button></li>
+                            </ul>
+                        </div>
+                        <div class="question">
+                            <p>Kan man kasta spjut längre än 100m?</p>
+                            <ul>
+                                <li><button>Ja</button></li>
+                                <li><button>Nej</button></li>
+                                <li><button>Kanske</button></li>
+                            </ul>
+                        </div>
+                        <button id="quiz-done">KLAR</button>
                     </div>
 
                 </div>
@@ -121,6 +146,6 @@
         </footer>
         <!-- <script src="scripts/api-calls.js"></script> -->
     </div>
+    <script src="scripts/sport.js"></script>
 </body>
-<script src="scripts/sport.js"></script>
 </html>
