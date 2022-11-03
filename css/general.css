@@ -12,9 +12,11 @@
     --coltured-color: #f8f8f8;
     --white-color: white;
     /* FONT FAMILY */
-
+    --paragraph-font: arial;
     /* FONT SIZE */
     --link-text-size: 1rem;
+    --paragraph-size: 1.2rem;
+    --h2-size: 3rem;
 
 }
 a:active,a:focus {
@@ -129,8 +131,13 @@ main section img {
     /* object-position: -50% 0; */
 }
 
-h2 {
-    font-size: 3rem;
+main h2 {
+    font-size: var(--h2-size);
+}
+
+main p {
+    font-size: var(--paragraph-size);
+    font-family: var(--paragraph-font);
 }
 
 #line, #line-white{
