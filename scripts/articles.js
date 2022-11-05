@@ -22,21 +22,21 @@ const addArticle = (image, imageAlt, title, paragraph) => {
 addArticle(
     "death-metal.jpeg",
     "Violin Violence",
-    `Death-metal bandet "Violin violence" tillbaka i Sverige på turné`,
+    `<strong>Musik |</strong> Death-metal bandet "Violin violence" tillbaka i Sverige på turné`,
     "Nu är de tillbaka! Som det svenska folket har väntat på att headbanga."
 );
 
 addArticle(
     "interview.jpeg",
     "image",
-    "Intervju: Äldre man",
+    "<strong>Intervju |</strong> Äldre man",
     "Vi intervjuade Mads Epicsson, han hade inget att säga. Vi kan lära oss mycket av Mads."
 );
 
 addArticle(
     "party-hard.jpeg",
     "image",
-    `Agda, 98år - "Ålder stoppar oss inte från att gå cray-cray"`,
+    `<strong>Intervju |</strong> Agda, 98år - "<i>Ålder stoppar oss inte från att gå cray-cray</i>"`,
     "Dessa damer är just kommit tillbaka från eventet Burning man, detta firas med en ordentlg förfest för att sedan gå vidare till Golden Hits."
 );
 

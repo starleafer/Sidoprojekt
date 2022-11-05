@@ -3,7 +3,20 @@ aside section {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+main section p {
+    padding-top: 2%;
+}
+
 #top10-books-side {
     display: flex;
     flex-flow: row wrap;
+}
+
+#top10-books-side img {
+    height: auto;
+    width: 20%;
+}
+
+strong {
+    color: #66a182;
 }
