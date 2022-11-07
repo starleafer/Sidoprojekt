@@ -12,6 +12,10 @@ aside section {
     box-shadow: 0px 0px 4px 2px #2f2f2f33;
 }
 
+#line {
+    margin: 20px 0 20px 0;
+}
+
 #latest-news, #chronicle {
     padding: 5%;
 }
@@ -28,13 +32,14 @@ aside section {
 
 h4 {
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    margin-left: 10px;
 }
 
 .theme {
     color: var(--dim-grey-color);
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .news-dot {
@@ -44,13 +49,13 @@ h4 {
     color: var(--green-color);
     border-radius: 50%;
     float: left;
-    margin: 2px 10px 0 10px;
+    margin: 3px 10px 0 10px;
 }
 
 .sport-latest-headline {
-    margin-left: 30px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    margin: 0 20px 0 30px;
+    font-weight: 550;
+    font-size: 1rem;
 }
 
 #sport-quiz img {
