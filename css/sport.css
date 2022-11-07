@@ -8,7 +8,7 @@
 
 aside section {
     background-color: var(--white-color);
-    border: none !important; /************ CHANGE THIS!!!! ************/
+    border: none !important; /*********** CHANGE THIS!!!! ***********/
     box-shadow: 0px 0px 4px 2px #2f2f2f33;
 }
 
