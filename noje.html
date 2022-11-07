@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/noje.css">
+    <script src="scripts/noje.js"></script>
+    <title>Sidoprojekt</title>
+</head>
+
+<body>
+    <div id="main-grid">
+        <header>
+            <div id="top-header">
+                <!-- <h1>Logga</h1> -->
+                <img id="logo" src="img/trubbelnytt.jpg" alt="logga">
+                <div id="top-buttons">
+                    <a href="" id="subscribe-button">Prenumerera</a>
+                    <a href="" id="loggin-button">Logga in</a>
+                </div>
+            </div>
+            <nav id="menu-nav">
+                <a href="" id="nyheter-link">Nyheter</a>
+                <a href="" id="vader-link">Väder</a>
+                <a href="" id="sport-link">Sport</a>
+                <a href="" id="ekonomi-link">Ekonomi</a>
+                <a href="" id="nöje-link">Nöje</a>
+                <a href="" id="kulture-link">Kultur</a>
+                <a href="" id="nyheter-link">Debatt</a>
+                <a href="" id="spel-link">Spel</a>
+                <div id="sok-link"><i class="fa fa-search"></i>Sök</div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <img src="img/noje/cat-puppet.jpg" alt="hamburger">
+                <h2>Influencer-Misse får hård kritik efter Halloweenbild</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
+                <div id="line"></div>
+            </section>
+            <section>
+                <h2>Senaste trenderna i bilder</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/noje/smartphone-pool.jpg" style="width:100%">
+                        <div class="text">Snygga smartphone-poolen</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/noje/pink-hair.jpg" style="width:100%">
+                        <div class="text">Se ut som ett troll - så får du till looken</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/noje/makeup.jpg" style="width:100%">
+                        <div class="text">Senaste smiktrenden, släng färg på ditt ansikte</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+            </section>
+        </main>
+        <aside class="sidebar-container">
+            <section  id="latest-news">Latest news
+            </section>
+            <section  id="weather-side">
+                <!-- <div>
+                    <img src="" alt="">
+                    <p>need to update weather later</p>
+
+                </div> -->
+            </section>
+            <section id="advert-side">Advertisement</section>
+        </aside>
+
+        <footer>
+        <div id="footer-div1">
+            <h3>Nyheter</h3>
+            <ul>
+                <li>Ekonomi</li>
+                <li>Sport</li>
+                <li>Spel</li>
+
+            </ul>
+        </div>
+        <div id="footer-div2">
+            <h3>Kontakt</h3>
+            <ul>
+                <li>Adress: </li>
+                <li>Telefon: </li>
+                <li>Email: </li>
+            </ul>
+        </div>
+        <div id="footer-div3">
+            <h3>Social media</h3>
+            <ul class="footer-list social-list">
+                <li class="social-media"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
+                <li class="social-media"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
+                <li class="social-media"><a href="https://www.twister.com/" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                <li class="social-media"><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"></i>Linkedin</a></li>
+              </ul>
+        </div>
+        
+        <div id="footer-div4">
+            <div id="line-white"></div>
+            <h3>Om oss</h3>
+            <div id="about">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis assumenda fugiat dolor sint ex dolorum, aliquid, ipsam nesciunt aspernatur distinctio harum laborum illo fugit sequi iste sit officia corrupti quisquam?</p>
+            </div>
+        </div>
+        </footer>
+        <script src="scripts/api-calls.js"></script>
+    </div>
+</body>
+</html>
