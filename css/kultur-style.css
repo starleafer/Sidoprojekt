@@ -1,0 +1,28 @@
+aside section {
+    border: 0 !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main section p {
+    padding-top: 2%;
+}
+
+#senaste-kultur-side ul {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#top10-books-side {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#top10-books-side img {
+    height: auto;
+    width: 18%;
+    margin: 1%;
+    border: 1px solid;
+}
+
+main strong {
+    color: #66a182;
+}

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/kultur-style.css">
-    <title>Sidoprojekt</title>
+    <title>Trubbel-Kultur</title>
 </head>
 
 <body>
@@ -22,41 +22,42 @@
                 </div>
             </div>
             <nav id="menu-nav">
-                <a href="" id="nyheter-link">Nyheter</a>
+                <a href="general.html" id="nyheter-link">Nyheter</a>
                 <a href="" id="vader-link">Väder</a>
-                <a href="" id="sport-link">Sport</a>
-                <a href="" id="ekonomi-link">Ekonomi</a>
-                <a href="" id="nöje-link">Nöje</a>
-                <a href="" id="kulture-link">Kultur</a>
-                <a href="" id="nyheter-link">Debatt</a>
+                <a href="sport.html" id="sport-link">Sport</a>
+                <a href="ekonomi.html" id="ekonomi-link">Ekonomi</a>
+                <a>Nöje</a>
+                <a>Kultur</a>
+                <a>Debatt</a>
                 <a href="" id="spel-link">Spel</a>
                 <div id="sok-link"><i class="fa fa-search"></i>Sök</div>
             </nav>
         </header>
 
-        <main>
-            <section>
-                <img src="img/hamburger.jpg" alt="hamburger">
-                <h2>Ny forsning visar att flugsvamp inte passar på burgare.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
-                <div id="line"></div>
-            </section>
-            <section>
-                <img src="img/hamburger.jpg" alt="hamburger">
-                <h2>Ny forsning visar att flugsvamp inte passar på burgare.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
-                <div id="line"></div>
-            </section>
-        </main>
+        <main id="js-generated-articles"></main>
         <aside class="sidebar-container">
-            <section  id="latest-news">Latest news
+            <section  id="senaste-kultur-side">
+                <ul>
+                    <li><strong>På turné i Stockholm</strong></li>
+                    <li>Upplysande intervju</li>
+                    <li>Festen slutar aldrig</li>
+                    <li>Drinken som föryngrar</li>
+                    <li>Drinken som åldrar</li>
+                </ul>
             </section>
-            <section  id="weather-side">
-                <!-- <div>
-                    <img src="" alt="">
-                    <p>need to update weather later</p>
-
-                </div> -->
+            <section  id="top10-books-side">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+                <img src="img/jsbook.jpeg" alt="JavaScript">
+            </section>
+            <section  id="top10-imdb-side">
             </section>
             <section id="advert-side">Advertisement</section>
         </aside>
@@ -98,7 +99,9 @@
             </div>
         </div>
         </footer>
-        <script src="scripts/api-calls.js"></script>
+        <!-- <script src="scripts/api-calls.js"></script> -->
+        <script src="scripts/articles.js"></script>
+        <!-- <script src="scripts/calendar.js"></script> -->
     </div>
 </body>
 </html>
