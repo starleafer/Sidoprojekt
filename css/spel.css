@@ -23,3 +23,24 @@
     cursor: pointer;
     border: 1px solid #2f2f2f;
 }
+
+.square {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 618px;
+    height: 618px;
+}
+
+.mole {
+    background-image: url("../img/mole.png");
+    background-size: cover;
+}
