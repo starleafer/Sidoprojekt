@@ -14,10 +14,12 @@
     border-radius: 10px;
 }
 
-#wrapper a {
+#wrapper button {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     text-align: center;
     padding-bottom: 5px;
     text-decoration: none;
+    cursor: pointer;
+    border: 1px solid #2f2f2f;
 }
