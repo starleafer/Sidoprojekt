@@ -1,0 +1,23 @@
+#wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+
+}
+
+#wrapper img{
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#wrapper a {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
