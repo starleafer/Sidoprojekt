@@ -57,20 +57,53 @@
                 <h4>Senaste sporthändelserna</h4>
                 <div id="line"></div>
                 <div class="news-dot"></div><p class="theme">FORMEL 1</p>
-                <p class="sport-latest-headline">Red Bull diskade efter otillåten motorolja</p>
+                <p class="sport-latest-headline">Red Bull diskade efter användning av otillåten motorolja</p>
                 <div id="line"></div>
                 <div class="news-dot"></div><p class="theme"> FOTBOLL</p>
-                <p class="sport-latest-headline">Frankrike till EM-final efter straffdrama</p>
+                <p class="sport-latest-headline">Frankrike till EM-final efter straffdrama - Kylian Mbappé matchhjälte</p>
             </section>
-            <section  id="weather-side">
-                <div>
-                    <img src="" alt="">
-                    <p>need to update weather later</p>
-
-                </div>
+            <section  id="chronicle">
+                <p class="chronicle-heading">Sportkrönika</p><p class="chronicle-title">Den nya generationens fotbollsspelare krossar glastaket</p>
             </section>
             <section id="sport-quiz">
-                <img src="/img/sportquiz.jpg" alt="sportquiz">
+                <button id="quiz-button" data-modal-target="#modal">
+                    <img src="img/Sportquiz2.jpg" alt="sportquiz">
+                </button>
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <div class="modal-title">Sport quiz</div>
+                        <button data-close-button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="question">
+                            <p>Hur många mål är rekord under en fotbollsmatch?</p>
+                            <ul>
+                                <li><button id="chose-152">152</button></li>
+                                <li><button id="chose-28">28</button></li>
+                                <li><button id="chose-72">72</button></li>
+                            </ul>
+                        </div>
+                        <div class="question">
+                            <p>Vad heter världens bästa cyklist?</p>
+                            <ul>
+                                <li><button>Per</button></li>
+                                <li><button>Gunnar</button></li>
+                                <li><button>Klara</button></li>
+                            </ul>
+                        </div>
+                        <div class="question">
+                            <p>Kan man kasta spjut längre än 100m?</p>
+                            <ul>
+                                <li><button>Ja</button></li>
+                                <li><button>Nej</button></li>
+                                <li><button>Kanske</button></li>
+                            </ul>
+                        </div>
+                        <button id="quiz-done">KLAR</button>
+                    </div>
+
+                </div>
+                <div id="overlay"></div>
             </section>
         </aside>
 
@@ -113,5 +146,6 @@
         </footer>
         <!-- <script src="scripts/api-calls.js"></script> -->
     </div>
+    <script src="scripts/sport.js"></script>
 </body>
 </html>
