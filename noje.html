@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/noje.css">
+    <script src="scripts/noje.js"></script>
     <title>Sidoprojekt</title>
 </head>
 
@@ -35,27 +36,32 @@
         </header>
 
         <main>
-            <div class="slideshow-container">
-    <div class="slides">
-      <img src="img/noje/smartphone-pool.jpg" style="width:100%">
-      <div class="text">Caption Text</div>
-    </div>
-  
-    <div class="slides">
-      <img src="img/noje/cat-puppet.jpg" style="width:100%">
-      <div class="text">Caption Two</div>
-    </div>
-  
-    <div class="slides">
-      <img src="img/noje/pink-hair.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
+            <section>
+                <img src="img/noje/cat-puppet.jpg" alt="hamburger">
+                <h2>Influencer-Misse får hård kritik efter Halloweenbild</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut nemo qui repellendus iusto quas, rerum reiciendis eos ea sunt mollitia quae aspernatur odit numquam itaque nulla, quibusdam incidunt assumenda.</p>
+                <div id="line"></div>
+            </section>
+            <section>
+                <h2>Senaste trenderna i bilder</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="img/noje/smartphone-pool.jpg" style="width:100%">
+                        <div class="text">Snygga smartphone-poolen</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/noje/pink-hair.jpg" style="width:100%">
+                        <div class="text">Se ut som ett troll - så får du till looken</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="img/noje/makeup.jpg" style="width:100%">
+                        <div class="text">Senaste smiktrenden, släng färg på ditt ansikte</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+            </section>
         </main>
         <aside class="sidebar-container">
             <section  id="latest-news">Latest news
