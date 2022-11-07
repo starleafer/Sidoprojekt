@@ -83,7 +83,7 @@ header {
 #menu-nav a {
     text-decoration: none;
 }
-#menu-nav a:hover {
+#menu-nav a:hover, #menu-nav .active {
     border-bottom: solid 5px var(--green-color);
 }
 
