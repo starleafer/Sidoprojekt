@@ -11,6 +11,8 @@ function linkWordGame() {
         let index = Math.floor(Math.random()*array.length);
         return words[index];
     }
+
+    // BUG REMINDER, man kan vinna innan alla rutor är ifylda
     
     let randomWord = getWord(words);
     let eachLetter = randomWord.split("");
