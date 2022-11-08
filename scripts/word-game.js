@@ -3,7 +3,30 @@ function linkWordGame() {
     let letterB     = document.getElementById('btn-b');
     let game2       = document.getElementById("wrapper");
     let gameWord    = document.getElementById("game-word");
+    let alphabetContainer = document.getElementById("alphabet-container");
+    let letterButtons = document.getElementsByClassName("letter-button")
+
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö"]
     const words = ["morot","hopprep","flöjt","solkräm","popcorn","dragspel","kalas"];
+
+    for (let i of alphabet) {
+        let letterButton = document.createElement('button');
+        letterButton.innerText = `${i.toUpperCase()}`;
+        letterButton.id = `${i}-btn`;
+        letterButton.classList.add("letter-buttons");
+
+        letterButton.addEventListener('click', function(e) {
+            alert(e.target.innerText);
+            
+        })
+
+        alphabetContainer.append(letterButton);
+    }
+
+    function checkForLetter() {
+        let word = getWord();
+        for (let )
+    }
 
     const counter = 10; //kanske en let på denna
 
@@ -29,12 +52,6 @@ function linkWordGame() {
 
     generateLetterBoxes(eachLetter);
 
-    letterA.addEventListener('click', function(e){
-        for(let letter of eachLetter){
-            if(letter == e.target.innerText){
-
-            }
-        }
-    })
+    
 
 }
