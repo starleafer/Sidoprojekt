@@ -1,3 +1,6 @@
+const weekDays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov','Dec']
+
 const data = null;
 
 const xhr = new XMLHttpRequest();
@@ -37,6 +40,7 @@ fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', 
          /*This keep data in the form of key and value*/
          let collectData = new Map()
             collectData.set('dataLocation', response.location.name)
+            collectData.set('dataCountry', response.location.country)
             collectData.set('dataTemperature', parseInt(response.current.temp_c))
             collectData.set('dataCondition', response.current.condition.text)
             collectData.set('datamaxTemperature', parseInt(response.forecast.forecastday[0].day.maxtemp_c))
@@ -44,17 +48,20 @@ fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', 
             collectData.set('datavisibility', response.current.vis_km)
             collectData.set('datahumidity', response.current.humidity)
             collectData.set('datafeels', Math.round(response.current.feelslike_c))
+            collectData.set('dataWeekDayDate', returnDate(response.forecast.forecastday[0].date))
 
 
        /*This set data to be displayed on the web*/
          for(let [key,value] of collectData){
             if(key == 'dataTemperature'){
-                displayData(key, `${value}°`)
+                displayData(key, `${value}°C`)
             }else{
                 displayData(key, value)
             }
          }
 
+         let bigWeatherIcon = document.getElementById("dayly-icon")
+         bigWeatherIcon.appendChild(imgElement(response.current.condition.icon, ""))
 
          let daysInfo = response.forecast.forecastday
          for(let day in daysInfo){
@@ -93,33 +100,49 @@ fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', 
     }
     
     function setDataHTML(id, hour, icon, temp){
-        let img = document.createElement('img')
-        img.src = `https:${icon}`
+        let img = imgElement(icon, "")
         createHTML(id, hour, temp, img)
     }
 
+    function returnWeekDay(date){
+        let d = new Date(date)
+        return weekDays[d.getDay()]
+    }
 
-    const weekDays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+    function returnDate(date){
+        let d = new Date(date)
+        return `${weekDays[d.getDay()]}   ${d.getDate()}-${returnMonth(date)}-${d.getFullYear()}`
+    }
+
+    function returnMonth(date){
+        let d = new Date(date)
+        return monthNames[d.getMonth()]
+    }
+
+    function imgElement(src, className){
+        let img = document.createElement('img')
+        img.src = `https:${src}`
+        img.className = className
+        return img
+    }
+
     function daysHTML(id, date, icon, max_temp, min_temp){
         let div = document.createElement('div')
         let p = document.createElement('p')
         let p1 = document.createElement('p')
         let p2 = document.createElement('p')
-        let img = document.createElement('img')
 
         p.className = "day-forecast"
-        const d = new Date(date)
         if(id == 0){
             p.textContent = "Today"
         }else{
-            p.textContent = weekDays[d.getDay()]
+            p.textContent = returnWeekDay(date)
         }
 
         p1.textContent = `${min_temp}°` 
         p1.className = "day-forecast"
 
-        img.src = `https:${icon}`
-        img.className = "day-forecast"
+        let img = imgElement(icon, 'day-forecast')
 
         p2.textContent = `${max_temp}°`
         p2.className = "day-forecast"
