@@ -41,46 +41,17 @@ game1.addEventListener("click", () => {
         <div class="square" id="9"></div>
     </div>
     `
-    linkGame();
+    linkMoleGame();
 });
 game2.addEventListener("click", () => {
     gameContent.innerHTML = `
     <div id="game-img">Bild</div>
-    <div id="game-word">Ord</div>
+    <div id="game-word"></div>
 
-    <div>
-        <button id="btn-a">a</button>
-        <button id="btn-b">b</button>
-        <button id="btn-c">c</button>
-        <button id="btn-d">d</button>
-        <button id="btn-e">e</button>
-        <button id="btn-f">f</button>
-        <button id="btn-g">g</button>
-        <button id="btn-h">h</button>
-        <button id="btn-i">i</button>
-        <button id="btn-j">j</button>
-        <button id="btn-k">k</button>
-        <button id="btn-l">l</button>
-        <button id="btn-m">m</button>
-        <button id="btn-n">n</button>
-        <button id="btn-o">o</button>
-        <button id="btn-p">p</button>
-        <button id="btn-q">q</button>
-        <button id="btn-r">r</button>
-        <button id="btn-s">s</button>
-        <button id="btn-t">t</button>
-        <button id="btn-u">u</button>
-        <button id="btn-v">v</button>
-        <button id="btn-w">w</button>
-        <button id="btn-x">x</button>
-        <button id="btn-y">y</button>
-        <button id="btn-z">z</button>
-        <button id="btn-oa">å</button>
-        <button id="btn-aa">ä</button>
-        <button id="btn-oo">ö</button>
-    </div>
+    <div id="alphabet-container"></div>
     `
-    
+    linkWordGame();
+
 });
 game3.addEventListener("click", () => {
     gameContent.innerHTML = `<h1>LET THE GAME3 BEGIN!</h1>`
