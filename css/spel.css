@@ -44,3 +44,43 @@
     background-image: url("../img/mole.png");
     background-size: cover;
 }
+
+
+
+/* WORD GAME */
+
+#game-img {
+    height: 200px;
+}
+
+.letter-boxes {
+    border-bottom: 1px solid black;
+    width: 70px;
+    height: 50px;
+    background-color: lightgrey;
+    margin: 3px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#game-word {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 50 auto;
+    justify-content: center;
+}
+
+#alphabet-container {
+    margin: 100px 20%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+#alphabet-container button {
+    font-size: 2rem;
+    background-color: white;
+    color: green;
+    border: none;
+    text-transform: uppercase;
+}
