@@ -43,6 +43,9 @@ game1.addEventListener("click", () => {
     `
     linkMoleGame();
 });
+
+// WORD GAME
+
 game2.addEventListener("click", () => {
     gameContent.innerHTML = `
     <div id="game-img">Bild</div>

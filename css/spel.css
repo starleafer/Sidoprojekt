@@ -80,7 +80,14 @@
 #alphabet-container button {
     font-size: 2rem;
     background-color: white;
-    color: green;
     border: none;
     text-transform: uppercase;
+}
+
+.btn-green {
+    color: green;
+}
+.btn-fade {
+    color: lightgray;
+    
 }
