@@ -41,14 +41,14 @@ game1.addEventListener("click", () => {
         <div class="square" id="9"></div>
     </div>
     `
-    linkGame();
+    linkMoleGame();
 });
 game2.addEventListener("click", () => {
     gameContent.innerHTML = `
     <div id="game-img">Bild</div>
-    <div id="game-word">Ord</div>
+    <div id="game-word"></div>
 
-    <div>
+    <div id="alphabet-container">
         <button id="btn-a">a</button>
         <button id="btn-b">b</button>
         <button id="btn-c">c</button>
@@ -80,7 +80,8 @@ game2.addEventListener("click", () => {
         <button id="btn-oo">ö</button>
     </div>
     `
-    
+    linkWordGame();
+
 });
 game3.addEventListener("click", () => {
     gameContent.innerHTML = `<h1>LET THE GAME3 BEGIN!</h1>`
