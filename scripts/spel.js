@@ -21,24 +21,26 @@ const game6       = document.getElementById("game-6");
 
 game1.addEventListener("click", () => {
     gameContent.innerHTML = `
-    <h1>Whack a mole</h1>
+    <h1 id="mole-headline">Whack a mole</h1>
+    <div id="mole-game-wrapper">
+        <div id="score-time-container">
+            <h2>Your score:</h2>
+            <h2 id="score">0</h2>
 
-    <h2>Your score:</h2>
-    <h2 id="score">0</h2>
-
-    <h2>Seconds left:</h2>
-    <h2 id="time-left">60</h2>
-
-    <div class="grid">
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-        <div class="square" id="9"></div>
+            <h2>Seconds left:</h2>
+            <h2 id="time-left">60</h2>
+        </div>
+        <div id="mole-grid">
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+            <div class="square" id="9"></div>
+        </div>
     </div>
     `
     linkMoleGame();
