@@ -24,10 +24,11 @@ game1.addEventListener("click", () => {
     <h1 id="mole-headline">Whack a mole</h1>
     <div id="mole-game-wrapper">
         <div id="score-time-container">
-            <h2>Your score:</h2>
+            <button id = "start-button">Start</button>
+            <h2>Din poäng</h2>
             <h2 id="score">0</h2>
 
-            <h2>Seconds left:</h2>
+            <h2>Sekunder kvar:</h2>
             <h2 id="time-left">60</h2>
         </div>
         <div id="mole-grid">

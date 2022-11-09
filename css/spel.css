@@ -33,6 +33,7 @@
     border-color: black;
     background-image: url("../img/mole-game/dirt.jpg");
     background-size: cover;
+    cursor: url("../img/mole-game/bat.png"), auto;
 }
 
 #mole-grid {
@@ -60,8 +61,17 @@
 
 #score-time-container h1, #score-time-container h2 {
     font-size: 20px;
+    margin-bottom: 10px;
     
 } 
+
+#start-button {
+    font-size: 30px;
+    padding: 10px;
+    margin: 50px auto;
+    background-color: var(--green-color);
+    border-radius: 5px;
+}
 
 #mole-headline {
     font-size: 40px;
@@ -74,8 +84,23 @@
     background-size: cover;
 }
 
-.hit {
+.boom {
     background-image: url("../img/mole-game/boom.png");
+    background-size: cover;
+}
+
+.pow {
+    background-image: url("../img/mole-game/pow.png");
+    background-size: cover;
+}
+
+.kapow {
+    background-image: url("../img/mole-game/kapow.png");
+    background-size: cover;
+}
+
+.zap {
+    background-image: url("../img/mole-game/zap.png");
     background-size: cover;
 }
 
