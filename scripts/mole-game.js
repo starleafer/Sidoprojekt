@@ -22,7 +22,7 @@ function linkMoleGame() {
 
     function randomClassChoser(array) {
         let i = Math.floor(Math.random() * array.length);
-        return classArray[i];
+        return array[i];
     }
 
     function randomSquare() {
@@ -67,12 +67,12 @@ function linkMoleGame() {
             timeLeft.style.fontSize = "25px";
         }
         if (currentTime < 10) {
-            timeLeft.style.fontSize ="20px"
+            timeLeft.style.fontSize ="20px";
         }
 
         if (currentTime === 0) {
-            clearInterval(timerId)
-            alert("GAME OVER! Your final score is " + result)
+            clearInterval(timerId);
+            alert("GAME OVER! Your final score is " + result);
         }
 
         timeLeft.textContent = currentTime;
