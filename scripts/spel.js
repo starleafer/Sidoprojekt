@@ -62,7 +62,13 @@ game2.addEventListener("click", () => {
 
 });
 game3.addEventListener("click", () => {
-    gameContent.innerHTML = `<div id="fish-background"></div>`
+    gameContent.innerHTML = `<div id="fish-background">
+    <button id="start-btn-fish">Start</button>
+    <p id="score-fish-game">Score: </p>
+    <img id="fish-img" src="img/fish-img.png" alt="Liten röd fisk">
+    </div>`
+
+    linkFishGame();
     
 });
 game4.addEventListener("click", () => {
