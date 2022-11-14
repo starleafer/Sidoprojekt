@@ -55,6 +55,7 @@ game2.addEventListener("click", () => {
     <div id="game-word"></div>
 
     <div id="alphabet-container"></div>
+    <p id="end-message"></p>
     `
     linkWordGame();
 
