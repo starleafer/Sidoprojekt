@@ -8,6 +8,7 @@ function importScript(url) {
 window.onload = function () {
     importScript("scripts/mole-game.js");
     importScript("scripts/word-game.js");
+    importScript("scripts/fish-game.js");
 }
 
 const gameContent = document.getElementById("game-content");
@@ -61,7 +62,13 @@ game2.addEventListener("click", () => {
 
 });
 game3.addEventListener("click", () => {
-    gameContent.innerHTML = `<h1>LET THE GAME3 BEGIN!</h1>`
+    gameContent.innerHTML = `<div id="fish-background">
+    <button id="start-btn-fish">Start</button>
+    <p id="score-fish-game">Score: </p>
+    <img id="fish-img" src="img/fish-img.png" alt="Liten röd fisk">
+    </div>`
+
+    linkFishGame();
     
 });
 game4.addEventListener("click", () => {

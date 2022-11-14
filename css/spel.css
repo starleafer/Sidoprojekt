@@ -1,3 +1,5 @@
+/*START-PAGE CSS*/
+
 #wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -161,4 +163,42 @@
 
 .lose-styling {
     color: red;
+}
+
+/*FISH GAME*/
+
+
+
+#fish-background {
+    background-color: rgb(0, 123, 123);
+    height: 500px;
+    width: 800px;
+    position: relative;
+}
+
+#start-btn-fish {
+    background-color: rgb(147, 245, 212);
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#score-fish-game {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    z-index: 1;
+}
+
+#fish-img {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 100px;
+    transform: translate(-50%, -50%);
 }
