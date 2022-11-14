@@ -91,3 +91,16 @@
     color: lightgray;
     
 }
+
+#end-message {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.winning-styling {
+    color: green;
+}
+
+.lose-styling {
+    color: red;
+}
