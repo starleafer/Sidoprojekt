@@ -198,7 +198,23 @@
 #fish-img {
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 100px;
     width: 100px;
+    border: solid black 1px;
     transform: translate(-50%, -50%);
+}
+
+#shark-img {
+    position: absolute;
+    top: 300px;
+    left: 100%;
+    width: 300px;
+    border:  solid black 1px;
+    animation: shark-img 2s infinite linear;
+
+}
+
+@keyframes shark-img {
+    0%{left: 800px;}
+    100%{left: -300px;}
 }
