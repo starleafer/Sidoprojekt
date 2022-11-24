@@ -52,7 +52,19 @@ game1.addEventListener("click", () => {
 
 game2.addEventListener("click", () => {
     gameContent.innerHTML = `
-    <div id="game-img">Bild</div>
+    <div id="cake-wrapper">
+        <div class="game-img-div"><img src="img/word-game/cake-monster.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake1.png"></img></div>
+        <div class="game-img-div"><img src="img/word-game/cake2.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake3.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake4.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake5.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake6.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake7.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake8.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake9.png"></div>
+        <div class="game-img-div"><img src="img/word-game/cake10.png"></div>
+    </div>
     <div id="game-word"></div>
 
     <div id="alphabet-container"></div>

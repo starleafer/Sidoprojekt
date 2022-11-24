@@ -56,14 +56,14 @@ function linkWordGame() {
     let eachLetter = randomWord.split("");
     let counter = 10;
     let letterButton;
-
+    
     for (let i of alphabet) {
         letterButton = document.createElement('button');
         letterButton.innerText = `${i.toUpperCase()}`;
         letterButton.id = `${i}-btn`;
         letterButton.classList.add("letter-buttons");
         letterButton.classList.add("btn-green");
-
+        
         letterButton.addEventListener('click', function (e) {
             checkForLetter(i);
             if (counter == 0) {
@@ -71,54 +71,51 @@ function linkWordGame() {
                 endMessage.innerText = "DU FÖRLORADE!"
                 endMessage.classList.add('lose-styling');
             }
-
+            
             if (rightLetters.length == randomWord.length) {
                 let endMessage = document.getElementById('end-message');
                 endMessage.innerText = "DU VANN!"
                 endMessage.classList.add('winning-styling');
-
-
             }
-
+            
             console.log(rightLetters);
             console.log(randomWord);
-
+            
         })
-
+        
         alphabetContainer.append(letterButton);
     }
-
+    
     function checkForLetter(char) {
         let usedLetter = document.getElementById(`${char}-btn`);
         var indexes = []
-
+        
         if (randomWord.includes(char)) {
-
+            
             for (let i = 0; i < randomWord.length; i++) {
                 if (randomWord[i] === char) {
                     indexes.push(i);
-
+                    
                 }
             }
-
+            
             for (let i of indexes) {
                 gameWord.children[i].innerText = `${char.toUpperCase()}`;
                 rightLetters += char;
             }
             console.log(indexes);
         }
-
+        
         else {
             counter--;
             console.log(`${char} is NOT in the word`);
             console.log(counter);
+            let firstCake = document.querySelector("#cake-wrapper").firstElementChild.nextElementSibling;
+            firstCake.remove();
         }
         usedLetter.classList.add("btn-fade");
         usedLetter.setAttribute('disabled', '');
     }
-
-
-
 
     console.log(eachLetter);
 
@@ -132,10 +129,5 @@ function linkWordGame() {
             gameWord.append(boxes);
         }
     }
-
-
     generateLetterBoxes(eachLetter);
-
-
-
 }
