@@ -109,7 +109,11 @@
 
 /* WORD GAME */
 
-#game-img {
+#game-img-div {
+    height: 200px;
+}
+
+#word-game-img {
     height: 200px;
 }
 

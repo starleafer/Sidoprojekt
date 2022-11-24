@@ -66,7 +66,7 @@ function linkWordGame() {
 
         letterButton.addEventListener('click', function (e) {
             checkForLetter(i);
-            if (counter == 0) {
+            if (counter == 1) {
                 let endMessage = document.getElementById('end-message');
                 endMessage.innerText = "DU FÖRLORADE!"
                 endMessage.classList.add('lose-styling');
@@ -76,8 +76,6 @@ function linkWordGame() {
                 let endMessage = document.getElementById('end-message');
                 endMessage.innerText = "DU VANN!"
                 endMessage.classList.add('winning-styling');
-
-
             }
 
             console.log(rightLetters);
@@ -86,6 +84,16 @@ function linkWordGame() {
         })
 
         alphabetContainer.append(letterButton);
+    }
+
+    function generatePictures(number) {
+        let imgDiv = document.getElementById("game-img-div");
+        if (number == 0) {
+            imgDiv.innerHTML = `<img id="word-game-img" src="img/word-game/fight.png">`;
+        } else {
+        imgDiv.innerHTML = `<img id="word-game-img" src="img/word-game/rabbit${number}.png">`;
+        imgDiv.style.paddingleft = `${(10-number)*10}px`;
+        }
     }
 
     function checkForLetter(char) {
@@ -112,13 +120,11 @@ function linkWordGame() {
             counter--;
             console.log(`${char} is NOT in the word`);
             console.log(counter);
+            generatePictures(counter);
         }
         usedLetter.classList.add("btn-fade");
         usedLetter.setAttribute('disabled', '');
     }
-
-
-
 
     console.log(eachLetter);
 
@@ -132,10 +138,5 @@ function linkWordGame() {
             gameWord.append(boxes);
         }
     }
-
-
     generateLetterBoxes(eachLetter);
-
-
-
 }

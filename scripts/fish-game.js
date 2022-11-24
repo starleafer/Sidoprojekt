@@ -2,7 +2,6 @@ function linkFishGame() {
 
     let startButton = document.getElementById("start-btn-fish");
 
-
     startButton.addEventListener("click", function () {
         startButton.remove();
         sharkFunction();

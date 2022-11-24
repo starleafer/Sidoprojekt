@@ -52,7 +52,7 @@ game1.addEventListener("click", () => {
 
 game2.addEventListener("click", () => {
     gameContent.innerHTML = `
-    <div id="game-img">Bild</div>
+    <div id="game-img-div"></div>
     <div id="game-word"></div>
 
     <div id="alphabet-container"></div>
