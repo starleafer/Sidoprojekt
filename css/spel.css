@@ -109,8 +109,16 @@
 
 /* WORD GAME */
 
-#game-img-div {
-    height: 200px;
+#cake-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.game-img-div img {
+    height: 100px;
+    padding-bottom: 20px;
 }
 
 #word-game-img {
