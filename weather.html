@@ -36,6 +36,14 @@
 
         <main class="myMain">
             <div class="weather-container">
+                <div class="inputs">
+                    <!-- <input type="text" name="inputLocation" id="inputLocation" placeholder="" /> -->
+                    <select id="inputLocation" name="inputLocation">
+                        <option value="stockholm" selected>Stockholm</option>
+                        <option value="paris">Paris</option>
+                        <option value="kinshasa">Kinshasa</option>
+                    </select>
+                </div>
                 <div class="weather today">
                     <div class="" id="WeekDayDate"></div>
                     <div class=""><i class="fa fa-location"></i><span id="Location"></span>, <span id="Country"></span></div>
@@ -48,7 +56,7 @@
                         <span class="low">L: <span id="lowTemperature"></span>°</span>
                     </div>
                 </div>
-                <div class="weather">
+                <div class="weather hours">
                     <div class="hours-info" id="hours-info">
                         
                     </div>
@@ -59,6 +67,7 @@
                 <div class="weather" id="weekdays3">
                     <div><i class="fa fa-calendar"></i> 3-DAY FORECAST</div>
                     <hr />
+                    <div class="days"></div>
                     
                 </div>
 

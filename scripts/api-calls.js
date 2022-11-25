@@ -32,63 +32,84 @@ const options = {
 	}
 };
 
-fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', options)
-	.then(response => response.json())
-	.then(response =>{
-         console.log(response)
 
-         /*This keep data in the form of key and value*/
-         let collectData = new Map()
-            collectData.set('dataLocation', response.location.name)
-            collectData.set('dataCountry', response.location.country)
-            collectData.set('dataTemperature', parseInt(response.current.temp_c))
-            collectData.set('dataCondition', response.current.condition.text)
-            collectData.set('datamaxTemperature', parseInt(response.forecast.forecastday[0].day.maxtemp_c))
-            collectData.set('datalowTemperature', parseInt(response.forecast.forecastday[0].day.mintemp_c))
-            collectData.set('datavisibility', response.current.vis_km)
-            collectData.set('datahumidity', response.current.humidity)
-            collectData.set('datafeels', Math.round(response.current.feelslike_c))
-            collectData.set('dataWeekDayDate', returnDate(response.forecast.forecastday[0].date))
+let inputLocation = document.getElementById("inputLocation")
+let currentLocation = inputLocation.value
+inputLocation.addEventListener("change",function(){
+    fetchData(inputLocation.value)
+})
 
+fetchData(currentLocation)
 
-       /*This set data to be displayed on the web*/
-         for(let [key,value] of collectData){
-            if(key == 'dataTemperature'){
-                displayData(key, `${value}°C`)
-            }else{
-                displayData(key, value)
-            }
-         }
+function fetchData(state){
+    fetch(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${state}&days=3`, options)
+        .then(response => response.json())
+        .then(response =>{
+             console.log(response)
+    
+             /*This keep data in the form of key and value*/
+             let collectData = new Map()
+                collectData.set('dataLocation', response.location.name)
+                collectData.set('dataCountry', response.location.country)
+                collectData.set('dataTemperature', parseInt(response.current.temp_c))
+                collectData.set('dataCondition', response.current.condition.text)
+                collectData.set('datamaxTemperature', parseInt(response.forecast.forecastday[0].day.maxtemp_c))
+                collectData.set('datalowTemperature', parseInt(response.forecast.forecastday[0].day.mintemp_c))
+                collectData.set('datavisibility', response.current.vis_km)
+                collectData.set('datahumidity', response.current.humidity)
+                collectData.set('datafeels', Math.round(response.current.feelslike_c))
+                collectData.set('dataWeekDayDate', returnDate(response.forecast.forecastday[0].date))
+    
+    
+           /*This set data to be displayed on the web*/
+             for(let [key,value] of collectData){
+                if(key == 'dataTemperature'){
+                    displayData(key, `${value}°C`)
+                }else{
+                    displayData(key, value)
+                }
+             }
+    
+             let bigWeatherIcon = document.getElementById("dayly-icon")
+             if(bigWeatherIcon.innerHTML !== ""  ){
+                bigWeatherIcon.innerHTML = ""
+             }
+             bigWeatherIcon.appendChild(imgElement(response.current.condition.icon, ""))
+    
+             let daysInfo = response.forecast.forecastday
+             if(document.querySelector(".days").innerHTML !== ""  ){
+                document.querySelector(".days").innerHTML = ""
+             }
+             for(let day in daysInfo){
+                daysHTML(
+                    day,
+                    daysInfo[day].date,
+                    daysInfo[day].day.condition.icon,
+                    parseInt(daysInfo[day].day.maxtemp_c),
+                    parseInt(daysInfo[day].day.mintemp_c),
+                )
+             }
+    
+             
+             
+             let dayInfo = response.forecast.forecastday[0].hour
+             if(document.querySelector("#hours-info").innerHTML !== ""  ){
+                document.querySelector("#hours-info").innerHTML = ""
+             }
+             for(let hour in dayInfo){
+                 setDataHTML(
+                     hour,
+                     dayInfo[hour].time.substring(11,13),
+                     dayInfo[hour].condition.icon,
+                     `${parseInt(dayInfo[hour].temp_c)}°`
+                     )
+                    }    
+                              
+                    
+                })
+                .catch(err => console.error(err))//end of fetch data
+}
 
-         let bigWeatherIcon = document.getElementById("dayly-icon")
-         bigWeatherIcon.appendChild(imgElement(response.current.condition.icon, ""))
-
-         let daysInfo = response.forecast.forecastday
-         for(let day in daysInfo){
-            daysHTML(
-                day,
-                daysInfo[day].date,
-                daysInfo[day].day.condition.icon,
-                parseInt(daysInfo[day].day.maxtemp_c),
-                parseInt(daysInfo[day].day.mintemp_c),
-            )
-         }
-
-         
-         
-         let dayInfo = response.forecast.forecastday[0].hour
-         for(let hour in dayInfo){
-             setDataHTML(
-                 hour,
-                 dayInfo[hour].time.substring(11,13),
-                 dayInfo[hour].condition.icon,
-                 `${parseInt(dayInfo[hour].temp_c)}°`
-                 )
-                }    
-                          
-                
-            })
-            .catch(err => console.error(err))//end of fetch data
             
            
             
@@ -131,6 +152,7 @@ fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', 
         let p = document.createElement('p')
         let p1 = document.createElement('p')
         let p2 = document.createElement('p')
+        let dom = document.querySelector(".days")
 
         p.className = "day-forecast"
         if(id == 0){
@@ -152,8 +174,9 @@ fetch('https://weatherapi-com.p.rapidapi.com/forecast.json?q=stockholm&days=3', 
         div.appendChild(img)
         div.appendChild(p1)
         div.appendChild(p2)
+
         
-        document.querySelector("#weekdays3").appendChild(div)
+        dom.appendChild(div)
     
     }//end of the daysHTML
 
