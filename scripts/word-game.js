@@ -1,7 +1,6 @@
 function linkWordGame() {
     let gameWord = document.getElementById("game-word");
     let alphabetContainer = document.getElementById("alphabet-container");
-    let letterButtons = document.getElementsByClassName("letter-button")
 
     const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k",
         "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
@@ -67,16 +66,11 @@ function linkWordGame() {
         letterButton.addEventListener('click', function (e) {
             checkForLetter(i);
             if (counter == 0) {
-                let endMessage = document.getElementById('end-message');
-                endMessage.innerText = "DU FÖRLORADE!"
-                endMessage.classList.add('lose-styling');
+                gameEndPopUp("loose");
             }
             
             if (rightLetters.length == randomWord.length) {
                 gameEndPopUp("win");
-                // let endMessage = document.getElementById('end-message');
-                // endMessage.innerText = "DU VANN!"
-                // endMessage.classList.add('winning-styling');
             }
             
             console.log(rightLetters);
@@ -96,7 +90,6 @@ function linkWordGame() {
             for (let i = 0; i < randomWord.length; i++) {
                 if (randomWord[i] === char) {
                     indexes.push(i);
-                    
                 }
             }
             
@@ -124,9 +117,7 @@ function linkWordGame() {
         for (let i = 0; i < letters.length; i++) {
             let boxes = document.createElement('div');
             boxes.classList.add('letter-boxes');
-            // boxes.innerText = `${letters[i].toUpperCase()}`;
             console.log(boxes);
-
             gameWord.append(boxes);
         }
     }

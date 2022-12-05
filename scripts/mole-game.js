@@ -72,7 +72,7 @@ function linkMoleGame() {
 
         if (currentTime === 0) {
             clearInterval(timerId);
-            alert("GAME OVER! Your final score is " + result);
+            gameEndPopUp("times-up", result);
         }
 
         timeLeft.textContent = currentTime;
