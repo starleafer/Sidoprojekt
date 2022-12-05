@@ -123,6 +123,7 @@ main {
     border-left: solid 1px var(--dark-grey-color);
     border-right: solid 1px var(--dark-grey-color);
     padding: 1rem;
+    position: relative;
 }
 
 main section img {

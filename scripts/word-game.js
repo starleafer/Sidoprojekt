@@ -73,9 +73,10 @@ function linkWordGame() {
             }
             
             if (rightLetters.length == randomWord.length) {
-                let endMessage = document.getElementById('end-message');
-                endMessage.innerText = "DU VANN!"
-                endMessage.classList.add('winning-styling');
+                gameEndPopUp("win");
+                // let endMessage = document.getElementById('end-message');
+                // endMessage.innerText = "DU VANN!"
+                // endMessage.classList.add('winning-styling');
             }
             
             console.log(rightLetters);

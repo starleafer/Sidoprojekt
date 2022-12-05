@@ -230,3 +230,28 @@
     0%{left: 800px;}
     100%{left: -300px;}
 }
+
+
+/* END GAME POP UP */
+
+.game-outcome-square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 30vh;
+    background-color: white;
+    z-index: 10;
+    border: 1px solid black;
+}
+
+.overlay {
+    position: absolute;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}

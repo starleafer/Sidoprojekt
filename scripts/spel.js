@@ -71,6 +71,7 @@ game2.addEventListener("click", () => {
     <p id="end-message"></p>
     `
     linkWordGame();
+    gameEndPopUp("win");
 
 });
 game3.addEventListener("click", () => {
@@ -95,3 +96,18 @@ game6.addEventListener("click", () => {
     gameContent.innerHTML = `<h1>LET THE GAME6 BEGIN!</h1>`
 
 });
+
+
+// POP-UP
+
+function gameEndPopUp(outcome) {
+
+    const popUpDiv = document.createElement('div');
+    popUpDiv.classList.add('game-outcome-square');
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+
+    document.querySelector('main').append(popUpDiv, overlay);
+
+}
