@@ -233,6 +233,29 @@
     100%{left: -300px;}
 }
 
+/*MINE GAME*/
+
+#mine-game-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: fit-content;
+    margin: 0 auto;
+    /* background-color: green; */
+    background-image: url('../img/grass.jpg');
+}
+
+#mine-game-content div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.poop-style {
+    width: 80px;
+    margin: 10px;
+}
+
+
 
 /* END GAME POP UP */
 
