@@ -145,7 +145,7 @@ function moleGameHTML() {
             <h2 id="score">0</h2>
 
             <h2>Sekunder kvar:</h2>
-            <h2 id="time-left">11</h2>
+            <h2 id="time-left">60</h2>
         </div>
         <div id="mole-grid">
             <div class="square" id="1"></div>

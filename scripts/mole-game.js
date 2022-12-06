@@ -8,7 +8,8 @@ function linkMoleGame() {
     let startButton = document.querySelector("#start-button");
 
 
-    startButton.addEventListener("click", function() {
+    startButton.addEventListener("click", function(e) {
+        e.target.style.visibility = "hidden";
         let result = 0;
         let currentTime = timeLeft.textContent;
         let classArray = ["zap", "boom", "pow", "kapow"];
@@ -26,9 +27,12 @@ function linkMoleGame() {
                 className.classList.remove("boom");
                 className.classList.remove("kapow");
             })
-
+            
             let randomPosition = square[Math.floor(Math.random()*9)]
-            randomPosition.classList.add("mole");
+            
+            if (!currentTime == 0) {
+                randomPosition.classList.add("mole");
+            }
 
             //assign the id of our random positon to hitposition for later use
             hitPosition = randomPosition.id
