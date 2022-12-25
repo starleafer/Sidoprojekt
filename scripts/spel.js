@@ -9,6 +9,7 @@ window.onload = function () {
     importScript("scripts/mole-game.js");
     importScript("scripts/word-game.js");
     importScript("scripts/fish-game.js");
+    importScript("scripts/board-game.js");
 }
 
 const gameContent = document.getElementById("game-content");
@@ -51,7 +52,9 @@ game5.addEventListener("click", () => {
 
 });
 game6.addEventListener("click", () => {
-    gameContent.innerHTML = `<h1>LET THE GAME6 BEGIN!</h1>`
+    selectedGame = "game6";
+    boardGameHTML();
+    linkBoardGame();
 
 });
 
@@ -103,6 +106,10 @@ function gameEndPopUp(outcome, result) {
             case "game3":
                 fishGameHTML();
                 linkFishGame();
+                break;
+            case "game6":
+                boardGameHTML();
+                linkBoardGame();
                 break;
         }
     })
@@ -168,4 +175,10 @@ function fishGameHTML() {
     <p id="score-fish-game">Score: </p>
     <img id="fish-img" src="img/fish-img.png" alt="Liten röd fisk">
     </div>`
+}
+
+function boardGameHTML() {
+    gameContent.innerHTML = `
+    <div id="dice" class="small-text">Throw the dice</div>
+    `
 }

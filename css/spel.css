@@ -233,6 +233,26 @@
     100%{left: -300px;}
 }
 
+/* BOARD-GAME */
+
+#dice {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    background-color: rgb(177, 177, 177);
+}
+
+.small-text {
+    font-size: 25px;
+}
+
+.big-text {
+    font-size: 50px;
+}
 
 /* END GAME POP UP */
 
