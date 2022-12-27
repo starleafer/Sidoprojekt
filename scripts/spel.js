@@ -201,13 +201,13 @@ function boardGameHTML() {
             <div class="board-grid"></div>
             <div class="board-grid"></div>
             <div class="board-grid"><div id="10" class="player-path"></div></div>
-            <div class="board-grid"><div id="9" class="player-path"></div></div>
+            <div class="board-grid"><div id="9" class="chance" class="player-path">?</div></div>
 
             <div class="board-grid"></div>
-            <div class="board-grid"><div id="14" class="player-path"></div></div>
+            <div class="board-grid"><div id="14" class="chance" class="player-path">?</div></div>
             <div class="board-grid"><div id="13" class="player-path"></div></div>
             <div class="board-grid"><div id="12" class="player-path"></div></div>
-            <div class="board-grid"><div id="11" class="player-path"></div></div>
+            <div class="board-grid"><div id="11" class="chance" class="player-path">?</div></div>
             <div class="board-grid"></div>
 
             <div class="board-grid"></div>
@@ -219,8 +219,8 @@ function boardGameHTML() {
 
             <div class="board-grid"></div>
             <div class="board-grid"><div id="16" class="player-path"></div></div>
-            <div class="board-grid"><div id="17" class="player-path"></div></div>
-            <div class="board-grid"><div id="18" class="player-path"></div></div>
+            <div class="board-grid"><div id="17" class="chance" class="player-path">?</div></div>
+            <div class="board-grid"><div id="18" class="chance" class="player-path">?</div></div>
             <div class="board-grid"><div id="19" class="player-path"></div></div>
             <div class="board-grid"><div id="20" class="player-path"></div></div>
         </div>
