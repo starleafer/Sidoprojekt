@@ -179,6 +179,52 @@ function fishGameHTML() {
 
 function boardGameHTML() {
     gameContent.innerHTML = `
-    <div id="dice" class="small-text">Throw the dice</div>
+    <div id="board-wrapper">
+        <div id="dice" class="small-text">Throw the dice</div>
+        <div id="main-board">
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="4" class="player-path"></div></div>
+            <div class="board-grid"><div id="5" class="chance" class="player-path">?</div></div>
+            <div class="board-grid"><div id="6" class="player-path"></div></div>
+            <div class="board-grid"><div id="7" class="chance" class="player-path">?</div></div>
+
+            <div class="board-grid"><div id="1" class="player-path"></div></div>
+            <div class="board-grid"><div id="2" class="player-path"></div></div>
+            <div class="board-grid"><div id="3" class="player-path"></div></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="8" class="player-path"></div></div>
+
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="10" class="player-path"></div></div>
+            <div class="board-grid"><div id="9" class="player-path"></div></div>
+
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="14" class="player-path"></div></div>
+            <div class="board-grid"><div id="13" class="player-path"></div></div>
+            <div class="board-grid"><div id="12" class="player-path"></div></div>
+            <div class="board-grid"><div id="11" class="player-path"></div></div>
+            <div class="board-grid"></div>
+
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="15" class="player-path"></div></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+            <div class="board-grid"></div>
+
+            <div class="board-grid"></div>
+            <div class="board-grid"><div id="16" class="player-path"></div></div>
+            <div class="board-grid"><div id="17" class="player-path"></div></div>
+            <div class="board-grid"><div id="18" class="player-path"></div></div>
+            <div class="board-grid"><div id="19" class="player-path"></div></div>
+            <div class="board-grid"><div id="20" class="player-path"></div></div>
+        </div>
+        <button id="chance-cards" disabled>Chance Card</button>
+    </div>
     `
 }
