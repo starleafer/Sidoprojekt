@@ -295,6 +295,10 @@
     background-color: blue;
 }
 
+.enemy {
+    background-color: red;
+}
+
 
 
 /* END GAME POP UP */
