@@ -170,10 +170,12 @@ function moleGameHTML() {
 }
 
 function fishGameHTML() {
-    gameContent.innerHTML = `<div id="fish-background">
+    gameContent.innerHTML = `
+    <div id="fish-background">
+    <canvas id="fish-canvas"></canvas>
     <button id="start-btn-fish">Start</button>
     <p id="score-fish-game">Score: </p>
-    <img id="fish-img" src="img/fish-img.png" alt="Liten röd fisk">
+    <img id="fish-img" src="img/fish-game/fish-small.png" alt="Liten röd fisk">
     </div>`
 }
 
