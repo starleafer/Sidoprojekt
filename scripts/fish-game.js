@@ -10,6 +10,8 @@ function linkFishGame() {
         const ctx = canvas.getContext("2d");
         const CANVAS_WIDTH = canvas.width = 800;
         const CANVAS_HEIGHT = canvas.height = 500;
+
+        let gamespeed = 2;
     
         const fish_backround = new Image();
         fish_backround.src = "img/fish-game/background.png";
@@ -25,50 +27,92 @@ function linkFishGame() {
         fish_sand.src = "img/fish-game/sand.png";
         const coral1 = new Image();
         coral1.src ="img/fish-game/coral1.png";
-        const coral2 = new Image();
-        coral2.src ="img/fish-game/coral2.png";
         const coral3 = new Image();
         coral3.src ="img/fish-game/coral3.png";
-        const coral4 = new Image();
-        coral4.src ="img/fish-game/coral3.png";
 
+        class background_layer {
+            constructor (image, speedModifier) {
+                this.x = 0;
+                this.y = 0;
+                this.width = 800;
+                this.height = 480;
+                this.x2 = this.width;
+                this.image = image;
+                this.speedModifier = speedModifier;
+                this.speed = gamespeed * speedModifier;
+            }
 
+            update(){
+                this.speed = gamespeed * this.speedModifier;
+                if (this.x <= -this.width) {
+                    this.x = this.width + this.x2 - this.speed;
+                }
 
-        let x = 0;
-        let x2 = 800;
+                if (this.x2 <= -this.width) {
+                    this.x2 = this.width + this.x - this.speed;
+                }
+                this.x = Math.floor(this.x - this.speed);
+                this.x2 = Math.floor(this.x2 - this.speed);
+            }
+
+            draw() {
+                ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+                ctx.drawImage(this.image, this.x2, this.y, this.width, this.height)
+            }
+        }
+
+        const bgLayer1 = new background_layer(fish_backround, 0);
+        const bgLayer2 = new background_layer(fish_school2, 1.5);
+        const bgLayer3 = new background_layer(coral1, 0.5);
+        const bgLayer4 = new background_layer(coral3, 0.5);
+        const bgLayer5 = new background_layer(fish_school1, 0.8);
+        const bgLayer6 = new background_layer(fish_backround2, 0);
+        const bgLayer7 = new background_layer(fish_sand, 0.5);
+        const bgLayer8 = new background_layer(fish_waves, 0.8);
+
+        const bgObjects = [bgLayer1, bgLayer2, bgLayer3, bgLayer4, bgLayer5, bgLayer6, bgLayer7, bgLayer8]
+
+        // let x = 0;
+        // let x2 = 800;
 
         function animate() {
-            ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)
-            ctx.drawImage(fish_backround, 0, 0)
-            // ctx.drawImage(coral2, x, 0)
-            ctx.drawImage(fish_school2, x, 0)
-            ctx.drawImage(coral1, x, 0)
-            ctx.drawImage(coral3, x, 0)
-            ctx.drawImage(coral1, x2, 0)
-            ctx.drawImage(coral3, x2, 0)
-            ctx.drawImage(fish_school1, x, 0)
-            ctx.drawImage(fish_backround2, 0, 0)
-            
-            
-            ctx.drawImage(fish_sand, x, 0)
-            ctx.drawImage(fish_waves, x, 0)
-            ctx.drawImage(fish_sand, x2, 0)
-            ctx.drawImage(fish_waves, x2, 0)
-            
-            // ctx.drawImage(coral4, x, 0)
-            
-            if (x < -800) {
-                x = 799 +x2;
-            } else {
-                x--;
-            }
+            ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+            bgObjects.forEach(layer => {
+                layer.update();
+                layer.draw();
+            })
 
-            if (x2 < -800) {
-                x2 = 799 + x;
-            } else {
-                x2--;
-            }
             requestAnimationFrame(animate);
+
+            // ctx.drawImage(fish_backround, 0, 0)
+        
+            // ctx.drawImage(fish_school2, x, 0)
+            // ctx.drawImage(coral1, x, 0)
+            // ctx.drawImage(coral3, x, 0)
+            // ctx.drawImage(coral1, x2, 0)
+            // ctx.drawImage(coral3, x2, 0)
+            // ctx.drawImage(fish_school1, x, 0)
+            // ctx.drawImage(fish_backround2, 0, 0)
+            
+            
+            // ctx.drawImage(fish_sand, x, 0)
+            // ctx.drawImage(fish_waves, x, 0)
+            // ctx.drawImage(fish_sand, x2, 0)
+            // ctx.drawImage(fish_waves, x2, 0)
+            
+            
+            
+            // if (x < -800) {
+            //     x = 799 +x2;
+            // } else {
+            //     x--;
+            // }
+
+            // if (x2 < -800) {
+            //     x2 = 799 + x;
+            // } else {
+            //     x2--;
+            // }
         }
 
         animate();
