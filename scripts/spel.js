@@ -9,6 +9,7 @@ window.onload = function () {
     importScript("scripts/mole-game.js");
     importScript("scripts/word-game.js");
     importScript("scripts/fish-game.js");
+
     importScript("scripts/mine-game.js");
 }
 
@@ -54,7 +55,9 @@ game5.addEventListener("click", () => {
 
 });
 game6.addEventListener("click", () => {
-    gameContent.innerHTML = `<h1>LET THE GAME6 BEGIN!</h1>`
+    selectedGame = "game6";
+    boardGameHTML();
+    linkBoardGame();
 
 });
 
@@ -107,6 +110,10 @@ function gameEndPopUp(outcome, result) {
                 fishGameHTML();
                 linkFishGame();
                 break;
+            case "game6":
+                boardGameHTML();
+                linkBoardGame();
+                break;
         }
     })
 
@@ -148,7 +155,7 @@ function moleGameHTML() {
             <h2 id="score">0</h2>
 
             <h2>Sekunder kvar:</h2>
-            <h2 id="time-left">11</h2>
+            <h2 id="time-left">60</h2>
         </div>
         <div id="mole-grid">
             <div class="square" id="1"></div>
@@ -166,12 +173,15 @@ function moleGameHTML() {
 }
 
 function fishGameHTML() {
-    gameContent.innerHTML = `<div id="fish-background">
+    gameContent.innerHTML = `
+    <div id="fish-background">
+    <canvas id="fish-canvas"></canvas>
     <button id="start-btn-fish">Start</button>
     <p id="score-fish-game">Score: </p>
-    <img id="fish-img" src="img/fish-img.png" alt="Liten röd fisk">
+    <img id="fish-img" src="img/fish-game/fish-small.png" alt="Liten röd fisk">
     </div>`
 }
+
 
 function mineGameHTML() {
     gameContent.innerHTML = `
@@ -181,6 +191,5 @@ function mineGameHTML() {
             <div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
             <div>16</div><div>17</div><div>18</div><div>19</div><div>20</div>
             <div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
-        </div>
-    `
+        </div>`
 }
