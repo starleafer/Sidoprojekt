@@ -287,27 +287,28 @@
 
 #main-board {
     display: grid;
-    grid-template-columns: repeat(6, 50px);
+    grid-template-columns: repeat(6, 80px);
     background-image: url('../img/board-game/wooden_board.png');
     background-size: contain;
 }
 
 .board-grid {
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     border: 1px solid black;
 }
 
 .player-path, .chance {
     margin: 4px auto;
-    height: 40px;
-    width: 40px;
+    padding-top: 5px;
+    height: 70px;
+    width: 70px;
     border: 1px solid black;
     border-radius: 50%;
 }
 
 .chance {
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     background-color: green;
 }

@@ -25,8 +25,7 @@ function linkBoardGame() {
             case 0: 
                 color(2);
                 break;
-            case 1: 
-                alert("hej");
+            case 1:
                 break;
             case 2: 
                 color(1);
