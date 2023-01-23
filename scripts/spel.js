@@ -9,7 +9,8 @@ window.onload = function () {
     importScript("scripts/mole-game.js");
     importScript("scripts/word-game.js");
     importScript("scripts/fish-game.js");
-    importScript("scripts/board-game.js");
+
+    importScript("scripts/mine-game.js");
 }
 
 const gameContent = document.getElementById("game-content");
@@ -44,7 +45,9 @@ game3.addEventListener("click", () => {
     
 });
 game4.addEventListener("click", () => {
-    gameContent.innerHTML = `<h1>LET THE GAME4 BEGIN!</h1>`
+    selectedGame = "game4";
+    mineGameHTML();
+    linkMineGame();
 
 });
 game5.addEventListener("click", () => {
@@ -179,54 +182,14 @@ function fishGameHTML() {
     </div>`
 }
 
-function boardGameHTML() {
+
+function mineGameHTML() {
     gameContent.innerHTML = `
-    <div id="board-wrapper">
-        <div id="dice" class="small-text">Throw the dice</div>
-        <div id="main-board">
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="4" class="player-path"></div></div>
-            <div class="board-grid"><div id="5" class="chance" class="player-path">?</div></div>
-            <div class="board-grid"><div id="6" class="player-path"></div></div>
-            <div class="board-grid"><div id="7" class="chance" class="player-path">?</div></div>
-
-            <div class="board-grid"><div id="1" class="player-path"></div></div>
-            <div class="board-grid"><div id="2" class="player-path"></div></div>
-            <div class="board-grid"><div id="3" class="player-path"></div></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="8" class="player-path"></div></div>
-
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="10" class="player-path"></div></div>
-            <div class="board-grid"><div id="9" class="chance" class="player-path">?</div></div>
-
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="14" class="chance" class="player-path">?</div></div>
-            <div class="board-grid"><div id="13" class="player-path"></div></div>
-            <div class="board-grid"><div id="12" class="player-path"></div></div>
-            <div class="board-grid"><div id="11" class="chance" class="player-path">?</div></div>
-            <div class="board-grid"></div>
-
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="15" class="player-path"></div></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-            <div class="board-grid"></div>
-
-            <div class="board-grid"></div>
-            <div class="board-grid"><div id="16" class="player-path"></div></div>
-            <div class="board-grid"><div id="17" class="chance" class="player-path">?</div></div>
-            <div class="board-grid"><div id="18" class="chance" class="player-path">?</div></div>
-            <div class="board-grid"><div id="19" class="player-path"></div></div>
-            <div class="board-grid"><div id="20" class="player-path"></div></div>
-        </div>
-        <button id="chance-cards" disabled>Chance Card</button>
-    </div>
-    `
+        <div id="mine-game-content">
+            <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+            <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
+            <div>11</div><div>12</div><div>13</div><div>14</div><div>15</div>
+            <div>16</div><div>17</div><div>18</div><div>19</div><div>20</div>
+            <div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
+        </div>`
 }
