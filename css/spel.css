@@ -288,6 +288,8 @@
 #main-board {
     display: grid;
     grid-template-columns: repeat(6, 50px);
+    background-image: url('../img/board-game/wooden_board.png');
+    background-size: contain;
 }
 
 .board-grid {
