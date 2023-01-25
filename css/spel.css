@@ -258,6 +258,14 @@
     width: 80px;
     margin: 10px;
 }
+
+.nr-of-poos {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 4em;
+}
+
 /* BOARD-GAME */
 
 #dice {
