@@ -3,6 +3,7 @@ const linkMineGame = () => {
     let poopArray = []
     const nrOfPoos = 7;
     
+    let emptySqueres = []
     
     //Place poops across the game
     while(poopArray.length < nrOfPoos) {
@@ -31,26 +32,47 @@ const linkMineGame = () => {
                 (i-6),(i-5),(i-4),(i-1),
                 (i+1),(i+4),(i+5),(i+6)
             ]
-            console.log(neighborArray);
         }
         if (i%5 === 0){
             neighborArray.splice(7, 1);
             neighborArray.splice(4, 1);
             neighborArray.splice(2, 1);
-            console.log("new array" + neighborArray);
         }
         if ((i-1)%5 === 0){
             neighborArray.splice(5, 1);
             neighborArray.splice(3, 1);
             neighborArray.splice(0, 1);
-            console.log("new array" + neighborArray);
         }
         for (let neighbor of neighborArray){
             if (poopArray.includes(neighbor)){
                 numberOfPoopNeightbors++;
-                console.log(numberOfPoopNeightbors);
-                console.log(neighbor + "is included");
             }
         }
+        emptySqueres.push(numberOfPoopNeightbors);
+    }
+
+    // for(let pooSquere of pooGameSquares) {
+    //     pooSquere.addEventListener('click', function(){
+    //         for (let i=1; i <= pooGameSquares.length; i++) {
+                
+    //         }
+    //     });
+        
+    
+    for(let i=1; i <= pooGameSquares.length; i++) {
+
+        console.log(pooGameSquares[i]);
+        pooGameSquares[i-1].addEventListener('click', function(e){
+            console.log(poopArray);
+            console.log(i);
+            if(poopArray.includes(i)) {
+                console.log('eeeew');
+            } else {
+                console.log(e);
+                console.log("nr of neighbors "+emptySqueres[i-1]);
+                e.target.innerHTML = `<p class="nr-of-poos">${emptySqueres[i-1]}</p>`
+            }
+        });
+        
     }
 }
