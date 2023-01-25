@@ -182,12 +182,16 @@
 /*FISH GAME*/
 
 
-
 #fish-background {
-    background-color: rgb(0, 123, 123);
+    height: 480px;
+    width: 800px;
+    background-image: url("../img/fish-game/start-img.png");
+    position: relative;
+}
+
+#fish-canvas {
     height: 500px;
     width: 800px;
-    position: relative;
 }
 
 #start-btn-fish {
@@ -199,14 +203,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 10;
 }
 
 #score-fish-game {
     position: absolute;
     top: 1%;
     left: 1%;
-    z-index: 1;
+    z-index: 10;
 }
 
 #fish-img {
@@ -253,6 +257,74 @@
 .poop-style {
     width: 80px;
     margin: 10px;
+}
+/* BOARD-GAME */
+
+#dice {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    background-color: rgb(177, 177, 177);
+}
+
+.small-text {
+    font-size: 25px;
+}
+
+.big-text {
+    font-size: 50px;
+}
+
+#board-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+#main-board {
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    background-image: url('../img/board-game/wooden_board.png');
+    background-size: contain;
+}
+
+.board-grid {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+}
+
+.player-path, .chance {
+    margin: 4px auto;
+    padding-top: 5px;
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.chance {
+    font-size: 50px;
+    text-align: center;
+    background-color: green;
+}
+
+#chance-cards {
+    font-size: 30px;
+    height: 100px;
+    width: 200px;
+}
+
+.color {
+    background-color: blue;
+}
+
+.enemy {
+    background-color: red;
 }
 
 
