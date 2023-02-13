@@ -1,7 +1,7 @@
 const linkMineGame = () => {
     const pooGameSquares = document.querySelectorAll('#mine-game-content div');
     let poopArray = []
-    const nrOfPoos = 7;
+    const nrOfPoos = 4;
     
     let emptySqueres = []
     
@@ -13,16 +13,15 @@ const linkMineGame = () => {
         }
     }
 
-    for(let poop of poopArray) {
-        console.log(`poop: ${poop}`);
-        document.querySelector(`#mine-game-content div:nth-child(${poop})`).innerHTML = `
-            <img src="./img/poo_1f4a9.png" class="poop-style">
-        `;
-    }
-    console.log(pooGameSquares);
+    // for(let poop of poopArray) {
+    //     console.log(`poop: ${poop}`);
+    //     document.querySelector(`#mine-game-content div:nth-child(${poop})`).innerHTML = `
+    //         <img src="./img/poo_1f4a9.png" class="poop-style">
+    //     `;
+    // }
+    // console.log(pooGameSquares);
 
 
-    //FOR NEXT TIME: SQUARE IS NOT A NUMBER
     for (let i=1; i <= pooGameSquares.length; i++) {
         console.log('index' + i);
         let neighborArray = [];
@@ -67,12 +66,30 @@ const linkMineGame = () => {
             console.log(i);
             if(poopArray.includes(i)) {
                 console.log('eeeew');
+                for(let poop of poopArray) {
+                    console.log(`poop: ${poop}`);
+                    document.querySelector(`#mine-game-content div:nth-child(${poop})`).innerHTML = `
+                        <img src="./img/poo_1f4a9.png" class="poop-style">
+                    `;
+                    // gameEndPopUp("loose");
+
+                }
             } else {
                 console.log(e);
                 console.log("nr of neighbors "+emptySqueres[i-1]);
                 e.target.innerHTML = `<p class="nr-of-poos">${emptySqueres[i-1]}</p>`
             }
         });
+
+        pooGameSquares[i-1].addEventListener('contextmenu', function(e){
+            e.preventDefault();
+            console.log(e.target);
+            e.target.innerHTML = `<img class="sunflower" src= "img/sunflower.png">`
+            
+        });
+    
         
     }
+
+    
 }
