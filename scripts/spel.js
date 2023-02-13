@@ -71,7 +71,6 @@ function gameEndPopUp(outcome, result) {
 
     const overlay = document.createElement('div');
     overlay.classList.add('overlay');
-
     
     document.querySelector('main').append(popUpDiv, overlay);
     
@@ -97,6 +96,7 @@ function gameEndPopUp(outcome, result) {
     </div>`
 
     document.getElementById("again-btn").addEventListener("click", () => {
+        console.log(selectedGame);
         switch (selectedGame) {
             case "game1":
                 moleGameHTML();
@@ -109,6 +109,10 @@ function gameEndPopUp(outcome, result) {
             case "game3":
                 fishGameHTML();
                 linkFishGame();
+                break;
+            case "game4":
+                mineGameHTML();
+                linkMineGame();
                 break;
             case "game6":
                 boardGameHTML();
